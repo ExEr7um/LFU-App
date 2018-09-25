@@ -1,24 +1,477 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wZg-sP-qL4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Black.ttf">
+            <string>Montserrat-Black</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Вход-->
+        <scene sceneID="MTo-uT-QJG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController title="Вход" id="wZg-sP-qL4" customClass="LoginPageViewController" customModule="LFU_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g0z-t4-hHN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgF-KD-FPO">
+                                <rect key="frame" x="56.5" y="35" width="262" height="44"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Введите ваше имя" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ij3-Zy-vZR" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="156" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="erO-vZ-zHh"/>
+                                    <constraint firstAttribute="width" constant="300" id="vf0-uj-dVT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваше имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJB-Fn-Fhr">
+                                <rect key="frame" x="42.5" y="135" width="89" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="something@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3z5-tl-HJk" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="237" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KEJ-47-QhG"/>
+                                    <constraint firstAttribute="height" constant="50" id="aiw-8Q-hP5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш электронный адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Iv-5J-Wzy">
+                                <rect key="frame" x="43" y="216" width="219.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Выберите ваш класс" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7G-V8-weD" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="318.5" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="i3Y-C9-UjR"/>
+                                    <constraint firstAttribute="height" constant="50" id="mwH-bF-gic"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш класс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-N1-qZt">
+                                <rect key="frame" x="43" y="297" width="92.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Придумайте надежный пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avF-S0-Z0h" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="400" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7yx-u9-AD1"/>
+                                    <constraint firstAttribute="width" constant="300" id="fLC-GG-wFi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrT-nG-h6O">
+                                <rect key="frame" x="42" y="379" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpz-Fp-jIW">
+                                <rect key="frame" x="37.5" y="597" width="300" height="50"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="0Q1-mt-dBY"/>
+                                    <constraint firstAttribute="height" constant="50" id="ir8-RZ-wpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <state key="normal" title="Зарегистрироваться">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="zOu-Gr-GUo"/>
+                                    <segue destination="Bjh-73-fRg" kind="show" id="pXB-QQ-vKL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGn-Pz-aY4">
+                                <rect key="frame" x="37.5" y="547" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G1f-I9-UPG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gFP-cn-k2f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <state key="normal" title="Вход">
+                                    <color key="titleColor" name="mainColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="gHx-SI-aeE"/>
+                                    <segue destination="KSn-Kp-lva" kind="show" id="wdX-Ou-iST"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FGn-Pz-aY4" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="4oT-0c-wwI"/>
+                            <constraint firstItem="q7G-V8-weD" firstAttribute="top" secondItem="3z5-tl-HJk" secondAttribute="bottom" constant="31.5" id="5uO-ES-q4A"/>
+                            <constraint firstItem="3z5-tl-HJk" firstAttribute="leading" secondItem="9Iv-5J-Wzy" secondAttribute="trailing" constant="-225" id="GtS-gn-T3E"/>
+                            <constraint firstItem="q7G-V8-weD" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="Im6-x0-oeX"/>
+                            <constraint firstItem="hpz-Fp-jIW" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="KM4-bv-G81"/>
+                            <constraint firstItem="Ij3-Zy-vZR" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="POW-4Y-o1d"/>
+                            <constraint firstItem="IgF-KD-FPO" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="UKc-iU-oQT"/>
+                            <constraint firstItem="avF-S0-Z0h" firstAttribute="leading" secondItem="vrT-nG-h6O" secondAttribute="trailing" constant="-71.5" id="VI6-oh-5Jh"/>
+                            <constraint firstItem="q7G-V8-weD" firstAttribute="centerY" secondItem="Lwh-oe-qae" secondAttribute="centerY" id="Yb5-oX-tI5"/>
+                            <constraint firstItem="avF-S0-Z0h" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="bbi-pv-ZhY"/>
+                            <constraint firstItem="avF-S0-Z0h" firstAttribute="top" secondItem="q7G-V8-weD" secondAttribute="bottom" constant="31.5" id="byz-AS-sjR"/>
+                            <constraint firstItem="Lwh-oe-qae" firstAttribute="bottom" secondItem="hpz-Fp-jIW" secondAttribute="bottom" constant="20" id="fCL-gV-hMP"/>
+                            <constraint firstItem="avF-S0-Z0h" firstAttribute="top" secondItem="vrT-nG-h6O" secondAttribute="bottom" id="gbP-lG-NXa"/>
+                            <constraint firstItem="hpz-Fp-jIW" firstAttribute="top" secondItem="FGn-Pz-aY4" secondAttribute="bottom" id="hOH-Ff-LRq"/>
+                            <constraint firstItem="3z5-tl-HJk" firstAttribute="top" secondItem="Ij3-Zy-vZR" secondAttribute="bottom" constant="31" id="iWZ-eH-aNx"/>
+                            <constraint firstItem="q7G-V8-weD" firstAttribute="leading" secondItem="fD4-N1-qZt" secondAttribute="trailing" constant="-98" id="lvp-nc-I9b"/>
+                            <constraint firstItem="IgF-KD-FPO" firstAttribute="top" secondItem="Lwh-oe-qae" secondAttribute="top" constant="15" id="nHP-u2-YfG"/>
+                            <constraint firstItem="3z5-tl-HJk" firstAttribute="top" secondItem="9Iv-5J-Wzy" secondAttribute="bottom" id="rah-oV-xJN"/>
+                            <constraint firstItem="Ij3-Zy-vZR" firstAttribute="top" secondItem="zJB-Fn-Fhr" secondAttribute="bottom" id="uEt-ez-HD8"/>
+                            <constraint firstItem="3z5-tl-HJk" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="ulq-uD-Oad"/>
+                            <constraint firstItem="q7G-V8-weD" firstAttribute="top" secondItem="fD4-N1-qZt" secondAttribute="bottom" constant="0.5" id="vMm-1w-w1v"/>
+                            <constraint firstItem="Ij3-Zy-vZR" firstAttribute="leading" secondItem="zJB-Fn-Fhr" secondAttribute="trailing" constant="-94" id="zsN-xs-FMl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lwh-oe-qae"/>
+                    </view>
+                    <connections>
+                        <outlet property="classLabel" destination="fD4-N1-qZt" id="ME3-x5-Awf"/>
+                        <outlet property="classTextField" destination="q7G-V8-weD" id="8KB-RN-VIq"/>
+                        <outlet property="emailLabel" destination="9Iv-5J-Wzy" id="665-KG-f7y"/>
+                        <outlet property="emailTextField" destination="3z5-tl-HJk" id="aIE-WQ-FhD"/>
+                        <outlet property="nameLabel" destination="zJB-Fn-Fhr" id="gd4-gQ-AAa"/>
+                        <outlet property="nameTextField" destination="Ij3-Zy-vZR" id="20e-wH-VoU"/>
+                        <outlet property="passwordLabel" destination="vrT-nG-h6O" id="T4D-7W-Dc2"/>
+                        <outlet property="passwordTextField" destination="avF-S0-Z0h" id="iDh-sx-5vT"/>
+                        <outlet property="registerButton" destination="hpz-Fp-jIW" id="0Sv-pH-W8w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhI-rD-9ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.60000000000002" y="-382.75862068965517"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M6q-7Q-vme">
+            <objects>
+                <viewController id="KSn-Kp-lva" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uPx-DI-BsB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-kw-miY">
+                                <rect key="frame" x="145" y="35" width="85.5" height="42"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsy-YZ-Vwy">
+                                <rect key="frame" x="37.5" y="597" width="300" height="50"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6CN-Py-kIj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="7N6-Ir-YFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="euh-Tf-0fE"/>
+                                    <segue destination="Bjh-73-fRg" kind="show" id="i79-La-NDL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="something@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSx-yv-WCI" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="238" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="QnZ-ze-2OT"/>
+                                    <constraint firstAttribute="height" constant="50" id="fjt-7j-CkW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш электронный адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TD2-wy-WHt">
+                                <rect key="frame" x="66.5" y="218" width="196" height="20"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Придумайте надежный пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-xq-YAS" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="318.5" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="j0W-60-JqS"/>
+                                    <constraint firstAttribute="height" constant="50" id="rlM-bS-Lpq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-wm-Mo4">
+                                <rect key="frame" x="49" y="298.5" width="60" height="20"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrG-I7-4SJ">
+                                <rect key="frame" x="37.5" y="547" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PwP-Ry-AG9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uhs-N0-Q9d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <state key="normal" title="Регистрация">
+                                    <color key="titleColor" name="mainColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="H34-Ni-m3a"/>
+                                    <segue destination="wZg-sP-qL4" kind="show" id="qh6-O8-8Hc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NrG-I7-4SJ" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="8R1-Kv-afo"/>
+                            <constraint firstItem="Xsy-YZ-Vwy" firstAttribute="top" secondItem="NrG-I7-4SJ" secondAttribute="bottom" id="9Q3-7g-3ME"/>
+                            <constraint firstItem="sQ6-xq-YAS" firstAttribute="leading" secondItem="hkn-wm-Mo4" secondAttribute="trailing" constant="-71.5" id="CvI-SE-lLo"/>
+                            <constraint firstItem="Xsy-YZ-Vwy" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="HDE-Ur-Fcm"/>
+                            <constraint firstItem="7fR-kw-miY" firstAttribute="top" secondItem="piG-eI-DhZ" secondAttribute="top" constant="15" id="KVF-GR-yxh"/>
+                            <constraint firstItem="DSx-yv-WCI" firstAttribute="top" secondItem="TD2-wy-WHt" secondAttribute="bottom" id="N5m-Qr-zFN"/>
+                            <constraint firstItem="sQ6-xq-YAS" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="Ut6-5y-BgW"/>
+                            <constraint firstItem="DSx-yv-WCI" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="b8f-tS-cZD"/>
+                            <constraint firstItem="sQ6-xq-YAS" firstAttribute="centerY" secondItem="piG-eI-DhZ" secondAttribute="centerY" id="cLM-pq-HRF"/>
+                            <constraint firstItem="7fR-kw-miY" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="eLv-Xl-kQj"/>
+                            <constraint firstItem="hkn-wm-Mo4" firstAttribute="top" secondItem="DSx-yv-WCI" secondAttribute="bottom" constant="10.5" id="jp0-ww-bjW"/>
+                            <constraint firstItem="DSx-yv-WCI" firstAttribute="leading" secondItem="TD2-wy-WHt" secondAttribute="trailing" constant="-225" id="rTI-Np-g0A"/>
+                            <constraint firstItem="sQ6-xq-YAS" firstAttribute="top" secondItem="hkn-wm-Mo4" secondAttribute="bottom" id="rcl-aw-v6O"/>
+                            <constraint firstItem="piG-eI-DhZ" firstAttribute="bottom" secondItem="Xsy-YZ-Vwy" secondAttribute="bottom" constant="20" id="sZ6-TF-chy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="piG-eI-DhZ"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxu-Y9-jDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="310" y="293"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="OBb-s1-H3S">
+            <objects>
+                <viewController id="lXt-C3-yvH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hb-Zo-tiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="НАСТРОЙКИ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-Qr-nP3">
+                                <rect key="frame" x="20" y="30" width="169" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.30588235289999999" green="0.42352941179999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="djj-76-u5i"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="settingsIcon" id="VLL-RO-9BY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltB-JJ-8gY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="-51"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="3eL-ea-kIl">
+            <objects>
+                <viewController title="Главная" id="D4u-0U-jmg" customClass="mainPageViewController" customModule="LFU_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RLs-fZ-854">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ГЛАВНАЯ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9m-NV-Ir6">
+                                <rect key="frame" x="20" y="30" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.30588235289999999" green="0.42352941179999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СРЕДА" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-Az-e5z">
+                                <rect key="frame" x="20" y="59" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-K9-AeW">
+                                <rect key="frame" x="20" y="100" width="335" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Расписание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OV-w6-TsB">
+                                        <rect key="frame" x="111" y="5" width="115" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Русский язык" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5m-Eh-WxO">
+                                        <rect key="frame" x="10" y="36" width="121" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:30 — 10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-z9-EvE">
+                                        <rect key="frame" x="10" y="57" width="86" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2g-lx-Agn">
+                                        <rect key="frame" x="297" y="45" width="23" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVz-iP-N5w">
+                                        <rect key="frame" x="281" y="36" width="1" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="mainColor"/>
+                                        <color key="tintColor" name="mainColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="mainColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PPy-y3-GSu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="homeIcon" id="gUp-26-0YS"/>
+                    <connections>
+                        <outlet property="scheduleView" destination="nbC-K9-AeW" id="SUH-FE-ZTd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6i-Nj-V9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808.8000000000002" y="-716.49175412293857"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="d0R-gg-mxI">
+            <objects>
+                <tabBarController id="Bjh-73-fRg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VUs-g0-03S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="mainColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="D4u-0U-jmg" kind="relationship" relationship="viewControllers" id="Z1J-Dt-ude"/>
+                        <segue destination="lXt-C3-yvH" kind="relationship" relationship="viewControllers" id="YeM-c9-hmn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3J-SF-KFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855" y="-383"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeIcon" width="26" height="25"/>
+        <image name="settingsIcon" width="25" height="25"/>
+        <namedColor name="mainColor">
+            <color red="0.30588235294117649" green="0.42352941176470588" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pXB-QQ-vKL"/>
+    </inferredMetricsTieBreakers>
 </document>

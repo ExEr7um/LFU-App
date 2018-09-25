@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9478008B2119A8E100BABE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478008A2119A8E100BABE5D /* AppDelegate.swift */; };
-		9478008D2119A8E100BABE5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478008C2119A8E100BABE5D /* ViewController.swift */; };
 		947800902119A8E100BABE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9478008E2119A8E100BABE5D /* Main.storyboard */; };
 		947800922119A8E200BABE5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947800912119A8E200BABE5D /* Assets.xcassets */; };
 		947800952119A8E200BABE5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947800932119A8E200BABE5D /* LaunchScreen.storyboard */; };
 		947800A02119A8E300BABE5D /* LFU_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478009F2119A8E300BABE5D /* LFU_AppTests.swift */; };
 		947800AB2119A8E300BABE5D /* LFU_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947800AA2119A8E300BABE5D /* LFU_AppUITests.swift */; };
+		947800BA2119A97100BABE5D /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947800B92119A97100BABE5D /* LoginPageViewController.swift */; };
+		947800CE2119AF1100BABE5D /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 947800C52119AAF900BABE5D /* Montserrat-Black.ttf */; };
+		947800CF2119AF1500BABE5D /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 947800C42119AAF900BABE5D /* Montserrat-Regular.ttf */; };
+		947800D12119AFDF00BABE5D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947800D02119AFDF00BABE5D /* TextField.swift */; };
+		94ABC85A211B64F100EDA99A /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ABC859211B64F100EDA99A /* mainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		947800872119A8E100BABE5D /* LFU-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LFU-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9478008A2119A8E100BABE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9478008C2119A8E100BABE5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9478008F2119A8E100BABE5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		947800912119A8E200BABE5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947800942119A8E200BABE5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		947800A62119A8E300BABE5D /* LFU-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LFU-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947800AA2119A8E300BABE5D /* LFU_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFU_AppUITests.swift; sourceTree = "<group>"; };
 		947800AC2119A8E300BABE5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947800B92119A97100BABE5D /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		947800C42119AAF900BABE5D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		947800C52119AAF900BABE5D /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		947800D02119AFDF00BABE5D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		94ABC859211B64F100EDA99A /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,14 @@
 		947800892119A8E100BABE5D /* LFU-App */ = {
 			isa = PBXGroup;
 			children = (
+				947800B82119A94000BABE5D /* ViewControllers */,
+				94ABC856211B633C00EDA99A /* TextFields */,
 				9478008A2119A8E100BABE5D /* AppDelegate.swift */,
-				9478008C2119A8E100BABE5D /* ViewController.swift */,
 				9478008E2119A8E100BABE5D /* Main.storyboard */,
 				947800912119A8E200BABE5D /* Assets.xcassets */,
 				947800932119A8E200BABE5D /* LaunchScreen.storyboard */,
 				947800962119A8E200BABE5D /* Info.plist */,
+				947800BB2119AAA300BABE5D /* Fonts */,
 			);
 			path = "LFU-App";
 			sourceTree = "<group>";
@@ -123,6 +133,32 @@
 				947800AC2119A8E300BABE5D /* Info.plist */,
 			);
 			path = "LFU-AppUITests";
+			sourceTree = "<group>";
+		};
+		947800B82119A94000BABE5D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				947800B92119A97100BABE5D /* LoginPageViewController.swift */,
+				94ABC859211B64F100EDA99A /* mainPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		947800BB2119AAA300BABE5D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				947800C52119AAF900BABE5D /* Montserrat-Black.ttf */,
+				947800C42119AAF900BABE5D /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		94ABC856211B633C00EDA99A /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				947800D02119AFDF00BABE5D /* TextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				947800952119A8E200BABE5D /* LaunchScreen.storyboard in Resources */,
+				947800CE2119AF1100BABE5D /* Montserrat-Black.ttf in Resources */,
 				947800922119A8E200BABE5D /* Assets.xcassets in Resources */,
+				947800CF2119AF1500BABE5D /* Montserrat-Regular.ttf in Resources */,
 				947800902119A8E100BABE5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9478008D2119A8E100BABE5D /* ViewController.swift in Sources */,
+				94ABC85A211B64F100EDA99A /* mainPageViewController.swift in Sources */,
+				947800D12119AFDF00BABE5D /* TextField.swift in Sources */,
 				9478008B2119A8E100BABE5D /* AppDelegate.swift in Sources */,
+				947800BA2119A97100BABE5D /* LoginPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
