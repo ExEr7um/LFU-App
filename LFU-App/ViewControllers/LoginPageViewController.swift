@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginPageViewController: UIViewController {
+class SignUpPageViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -53,7 +53,7 @@ class LoginPageViewController: UIViewController {
     
     @IBOutlet weak var registerButton: UIButton!
     
-    @IBAction func registerButton(_ sender: UIButton) {
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
         checkNameTextField()
         checkEmailTextField()
         checkClassTextField()

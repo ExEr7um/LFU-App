@@ -22,7 +22,7 @@
         <!--Вход-->
         <scene sceneID="MTo-uT-QJG">
             <objects>
-                <viewController title="Вход" id="wZg-sP-qL4" customClass="LoginPageViewController" customModule="LFU_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Вход" id="wZg-sP-qL4" customClass="SignUpPageViewController" customModule="LFU_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0z-t4-hHN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="zOu-Gr-GUo"/>
+                                    <action selector="signUpButtonPressed:" destination="wZg-sP-qL4" eventType="touchUpInside" id="zOu-Gr-GUo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGn-Pz-aY4">
@@ -179,8 +179,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="gHx-SI-aeE"/>
-                                    <segue destination="KSn-Kp-lva" kind="show" id="wdX-Ou-iST"/>
+                                    <segue destination="KSn-Kp-lva" kind="show" id="Lyh-K7-wHH"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-jn-54h">
@@ -292,10 +291,10 @@
             </objects>
             <point key="canvasLocation" x="309.60000000000002" y="-382.75862068965517"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In Page View Controller-->
         <scene sceneID="M6q-7Q-vme">
             <objects>
-                <viewController id="KSn-Kp-lva" sceneMemberID="viewController">
+                <viewController id="KSn-Kp-lva" customClass="SignInPageViewController" customModule="LFU_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uPx-DI-BsB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,8 +323,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="euh-Tf-0fE"/>
-                                    <segue destination="Bjh-73-fRg" kind="show" id="i79-La-NDL"/>
+                                    <action selector="signInButtonPressed:" destination="KSn-Kp-lva" eventType="touchUpInside" id="Mr8-tV-sQ8"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="something@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSx-yv-WCI" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
@@ -344,6 +342,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="emailTextFieldEditingChanged:" destination="KSn-Kp-lva" eventType="editingChanged" id="jYv-T0-bOs"/>
+                                    <action selector="emailTextFieldEditingDidEnd:" destination="KSn-Kp-lva" eventType="editingDidEnd" id="c9g-t1-hu7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш электронный адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TD2-wy-WHt">
                                 <rect key="frame" x="43" y="216" width="219.5" height="21"/>
@@ -351,7 +353,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Придумайте надежный пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-xq-YAS" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Введите ваш пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-xq-YAS" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="318.5" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" name="mainColor"/>
@@ -367,6 +369,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="passwordTextFieldEditingChanged:" destination="KSn-Kp-lva" eventType="editingChanged" id="9Rg-aB-QvC"/>
+                                    <action selector="passwordTextFieldEditingDidEnd:" destination="KSn-Kp-lva" eventType="editingDidEnd" id="WdT-4l-QHS"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-wm-Mo4">
                                 <rect key="frame" x="42" y="297.5" width="67" height="21"/>
@@ -391,13 +397,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="H34-Ni-m3a"/>
                                     <segue destination="wZg-sP-qL4" kind="show" id="qh6-O8-8Hc"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-zG-MvP">
+                                <rect key="frame" x="37" y="237" width="5" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hol-lt-nln"/>
+                                    <constraint firstAttribute="width" constant="5" id="jzx-lE-fn3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mf6-ub-2TR">
+                                <rect key="frame" x="37" y="318.5" width="5" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="IU2-gE-PBv"/>
+                                    <constraint firstAttribute="height" constant="50" id="mKt-0D-d8N"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="sQ6-xq-YAS" firstAttribute="leading" secondItem="Mf6-ub-2TR" secondAttribute="trailing" constant="-4.5" id="2tS-sI-Ep3"/>
                             <constraint firstItem="NrG-I7-4SJ" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="8R1-Kv-afo"/>
                             <constraint firstItem="Xsy-YZ-Vwy" firstAttribute="top" secondItem="NrG-I7-4SJ" secondAttribute="bottom" id="9Q3-7g-3ME"/>
                             <constraint firstItem="sQ6-xq-YAS" firstAttribute="leading" secondItem="hkn-wm-Mo4" secondAttribute="trailing" constant="-71.5" id="CvI-SE-lLo"/>
@@ -406,15 +438,25 @@
                             <constraint firstItem="DSx-yv-WCI" firstAttribute="top" secondItem="TD2-wy-WHt" secondAttribute="bottom" id="N5m-Qr-zFN"/>
                             <constraint firstItem="sQ6-xq-YAS" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="Ut6-5y-BgW"/>
                             <constraint firstItem="DSx-yv-WCI" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="b8f-tS-cZD"/>
+                            <constraint firstItem="Mf6-ub-2TR" firstAttribute="top" secondItem="sQ6-xq-YAS" secondAttribute="bottom" constant="-50" id="bl7-as-KJU"/>
+                            <constraint firstItem="DSx-yv-WCI" firstAttribute="leading" secondItem="qkl-zG-MvP" secondAttribute="trailing" constant="-4.5" id="bpg-1E-Dxq"/>
                             <constraint firstItem="sQ6-xq-YAS" firstAttribute="centerY" secondItem="piG-eI-DhZ" secondAttribute="centerY" id="cLM-pq-HRF"/>
                             <constraint firstItem="7fR-kw-miY" firstAttribute="centerX" secondItem="piG-eI-DhZ" secondAttribute="centerX" id="eLv-Xl-kQj"/>
                             <constraint firstItem="hkn-wm-Mo4" firstAttribute="top" secondItem="DSx-yv-WCI" secondAttribute="bottom" constant="10.5" id="jp0-ww-bjW"/>
+                            <constraint firstItem="qkl-zG-MvP" firstAttribute="top" secondItem="DSx-yv-WCI" secondAttribute="bottom" constant="-50" id="p93-5L-Nsw"/>
                             <constraint firstItem="DSx-yv-WCI" firstAttribute="leading" secondItem="TD2-wy-WHt" secondAttribute="trailing" constant="-225" id="rTI-Np-g0A"/>
                             <constraint firstItem="sQ6-xq-YAS" firstAttribute="top" secondItem="hkn-wm-Mo4" secondAttribute="bottom" id="rcl-aw-v6O"/>
                             <constraint firstItem="piG-eI-DhZ" firstAttribute="bottom" secondItem="Xsy-YZ-Vwy" secondAttribute="bottom" constant="20" id="sZ6-TF-chy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="piG-eI-DhZ"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="DSx-yv-WCI" id="yuH-RT-1Yp"/>
+                        <outlet property="emailTextFieldIndicator" destination="qkl-zG-MvP" id="TKw-YV-hBh"/>
+                        <outlet property="passwordTextField" destination="sQ6-xq-YAS" id="JSM-K7-TaD"/>
+                        <outlet property="passwordTextFieldIndicator" destination="Mf6-ub-2TR" id="gJf-wZ-tgC"/>
+                        <segue destination="Bjh-73-fRg" kind="show" identifier="signInToHome" id="QmP-qY-etD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxu-Y9-jDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -552,6 +594,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w57-Je-EDo"/>
+        <segue reference="QmP-qY-etD"/>
     </inferredMetricsTieBreakers>
 </document>
