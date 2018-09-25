@@ -167,6 +167,16 @@
                                     <segue destination="KSn-Kp-lva" kind="show" id="wdX-Ou-iST"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-jn-54h">
+                                <rect key="frame" x="37" y="156" width="5" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -202,6 +212,7 @@
                         <outlet property="emailTextField" destination="3z5-tl-HJk" id="aIE-WQ-FhD"/>
                         <outlet property="nameLabel" destination="zJB-Fn-Fhr" id="gd4-gQ-AAa"/>
                         <outlet property="nameTextField" destination="Ij3-Zy-vZR" id="20e-wH-VoU"/>
+                        <outlet property="nameTextFieldIndicator" destination="Y4e-jn-54h" id="6Sr-iD-5yb"/>
                         <outlet property="passwordLabel" destination="vrT-nG-h6O" id="T4D-7W-Dc2"/>
                         <outlet property="passwordTextField" destination="avF-S0-Z0h" id="iDh-sx-5vT"/>
                         <outlet property="registerButton" destination="hpz-Fp-jIW" id="0Sv-pH-W8w"/>

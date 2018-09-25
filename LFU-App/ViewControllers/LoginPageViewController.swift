@@ -16,6 +16,8 @@ class LoginPageViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     
     @IBOutlet weak var nameTextField: TextField!
+    @IBOutlet weak var nameTextFieldIndicator: UIView!
+    
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var classTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
@@ -23,7 +25,10 @@ class LoginPageViewController: UIViewController {
     
     @IBAction func registerButton(_ sender: UIButton) {
         if nameTextField.text!.isEmpty {
-            
+            let animator = UIViewPropertyAnimator(duration: 0.2, dampingRatio: 1) {
+                self.nameTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.2392156863, alpha: 1)
+            }
+            animator.startAnimation()
         }
         if emailTextField.text!.isEmpty {
             
