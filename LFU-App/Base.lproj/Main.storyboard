@@ -114,7 +114,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Придумайте надежный пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avF-S0-Z0h" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Не менее 8 символов" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avF-S0-Z0h" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="400" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" name="mainColor"/>

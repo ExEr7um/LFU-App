@@ -140,7 +140,7 @@ class LoginPageViewController: UIViewController {
                 self.passwordTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.3392156863, alpha: 1)
             }
             animator.startAnimation()
-        } else {
+        } else if passwordTextField.text!.count >= 8 {
             let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
                 self.passwordTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.462745098, green: 0.8352941176, blue: 0.4470588235, alpha: 1)
             }
