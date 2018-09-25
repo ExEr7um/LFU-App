@@ -22,7 +22,21 @@ class LoginPageViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     @IBAction func registerButton(_ sender: UIButton) {
-        
+        if nameTextField.text!.isEmpty {
+            
+        }
+        if emailTextField.text!.isEmpty {
+            
+        }
+        if classTextField.text!.isEmpty {
+            
+        }
+        if passwordTextField.text!.isEmpty {
+            
+        }
+        if nameTextField.text!.isEmpty == false && emailTextField.text!.isEmpty == false && classTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
+            performSegue(withIdentifier: "signUpToHome", sender: registerButton)
+        }
     }
     
     override func viewDidLoad() {

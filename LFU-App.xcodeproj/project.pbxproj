@@ -50,7 +50,7 @@
 		947800A62119A8E300BABE5D /* LFU-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LFU-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947800AA2119A8E300BABE5D /* LFU_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFU_AppUITests.swift; sourceTree = "<group>"; };
 		947800AC2119A8E300BABE5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		947800B92119A97100BABE5D /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		947800B92119A97100BABE5D /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		947800C42119AAF900BABE5D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		947800C52119AAF900BABE5D /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		947800D02119AFDF00BABE5D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };

@@ -144,7 +144,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerButton:" destination="wZg-sP-qL4" eventType="touchUpInside" id="zOu-Gr-GUo"/>
-                                    <segue destination="Bjh-73-fRg" kind="show" id="pXB-QQ-vKL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGn-Pz-aY4">
@@ -206,6 +205,7 @@
                         <outlet property="passwordLabel" destination="vrT-nG-h6O" id="T4D-7W-Dc2"/>
                         <outlet property="passwordTextField" destination="avF-S0-Z0h" id="iDh-sx-5vT"/>
                         <outlet property="registerButton" destination="hpz-Fp-jIW" id="0Sv-pH-W8w"/>
+                        <segue destination="Bjh-73-fRg" kind="show" identifier="signUpToHome" id="w57-Je-EDo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhI-rD-9ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-kw-miY">
-                                <rect key="frame" x="145" y="35" width="85.5" height="42"/>
+                                <rect key="frame" x="137.5" y="35" width="100.5" height="44"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -249,7 +249,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="something@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSx-yv-WCI" customClass="TextField" customModule="LFU_App" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="238" width="300" height="50"/>
+                                <rect key="frame" x="37.5" y="237" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" name="mainColor"/>
                                 <constraints>
@@ -266,7 +266,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш электронный адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TD2-wy-WHt">
-                                <rect key="frame" x="66.5" y="218" width="196" height="20"/>
+                                <rect key="frame" x="43" y="216" width="219.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -289,7 +289,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-wm-Mo4">
-                                <rect key="frame" x="49" y="298.5" width="60" height="20"/>
+                                <rect key="frame" x="42" y="297.5" width="67" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -472,6 +472,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pXB-QQ-vKL"/>
+        <segue reference="w57-Je-EDo"/>
     </inferredMetricsTieBreakers>
 </document>
