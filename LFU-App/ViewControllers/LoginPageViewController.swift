@@ -17,28 +17,47 @@ class LoginPageViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: TextField!
     @IBOutlet weak var nameTextFieldIndicator: UIView!
+    @IBAction func nameTextFieldEditingDidEnd(_ sender: Any) {
+        checkNameTextField()
+    }
+    @IBAction func nameTextFieldEditingChanged(_ sender: Any) {
+        checkNameTextField()
+    }
     
     @IBOutlet weak var emailTextField: TextField!
+    @IBOutlet weak var emailTextFieldIndicator: UIView!
+    @IBAction func emailTextFieldEditingDidEnd(_ sender: Any) {
+        checkEmailTextField()
+    }
+    @IBAction func emailTextFieldEditingChanged(_ sender: Any) {
+        checkEmailTextField()
+    }
+    
     @IBOutlet weak var classTextField: TextField!
+    @IBOutlet weak var classTextFieldIndicator: UIView!
+    @IBAction func classTextFieldEditingDidEnd(_ sender: Any) {
+        checkClassTextField()
+    }
+    @IBAction func classTextFieldEditingChanged(_ sender: Any) {
+        checkClassTextField()
+    }
+    
     @IBOutlet weak var passwordTextField: TextField!
+    @IBOutlet weak var passwordTextFieldIndicator: UIView!
+    @IBAction func passwordTextFieldEditingDidEnd(_ sender: Any) {
+        checkPasswordTextField()
+    }
+    @IBAction func passwordTextFieldEditingChanged(_ sender: Any) {
+        checkPasswordTextField()
+    }
+    
     @IBOutlet weak var registerButton: UIButton!
     
     @IBAction func registerButton(_ sender: UIButton) {
-        if nameTextField.text!.isEmpty {
-            let animator = UIViewPropertyAnimator(duration: 0.2, dampingRatio: 1) {
-                self.nameTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.2392156863, alpha: 1)
-            }
-            animator.startAnimation()
-        }
-        if emailTextField.text!.isEmpty {
-            
-        }
-        if classTextField.text!.isEmpty {
-            
-        }
-        if passwordTextField.text!.isEmpty {
-            
-        }
+        checkNameTextField()
+        checkEmailTextField()
+        checkClassTextField()
+        checkPasswordTextField()
         if nameTextField.text!.isEmpty == false && emailTextField.text!.isEmpty == false && classTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
             performSegue(withIdentifier: "signUpToHome", sender: registerButton)
         }
@@ -75,5 +94,57 @@ class LoginPageViewController: UIViewController {
         }
         animator.startAnimation()
     }
-
+    
+    func checkNameTextField() {
+        if nameTextField.text!.isEmpty {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.nameTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.3392156863, alpha: 1)
+            }
+            animator.startAnimation()
+        } else {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.nameTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.462745098, green: 0.8352941176, blue: 0.4470588235, alpha: 1)
+            }
+            animator.startAnimation()
+        }
+    }
+    func checkEmailTextField() {
+        if emailTextField.text!.isEmpty {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.emailTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.3392156863, alpha: 1)
+            }
+            animator.startAnimation()
+        } else {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.emailTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.462745098, green: 0.8352941176, blue: 0.4470588235, alpha: 1)
+            }
+            animator.startAnimation()
+        }
+    }
+    func checkClassTextField() {
+        if classTextField.text!.isEmpty {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.classTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.3392156863, alpha: 1)
+            }
+            animator.startAnimation()
+        } else {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.classTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.462745098, green: 0.8352941176, blue: 0.4470588235, alpha: 1)
+            }
+            animator.startAnimation()
+        }
+    }
+    func checkPasswordTextField() {
+        if passwordTextField.text!.isEmpty {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.passwordTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.3392156863, alpha: 1)
+            }
+            animator.startAnimation()
+        } else {
+            let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
+                self.passwordTextFieldIndicator.backgroundColor = #colorLiteral(red: 0.462745098, green: 0.8352941176, blue: 0.4470588235, alpha: 1)
+            }
+            animator.startAnimation()
+        }
+    }
 }

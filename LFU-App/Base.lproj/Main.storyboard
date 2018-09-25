@@ -49,6 +49,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nameTextFieldEditingChanged:" destination="wZg-sP-qL4" eventType="editingChanged" id="H8b-sk-v3i"/>
+                                    <action selector="nameTextFieldEditingDidEnd:" destination="wZg-sP-qL4" eventType="editingDidEnd" id="r7f-Xn-U4H"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваше имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJB-Fn-Fhr">
                                 <rect key="frame" x="42.5" y="135" width="89" height="21"/>
@@ -72,6 +76,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="emailTextFieldEditingChanged:" destination="wZg-sP-qL4" eventType="editingChanged" id="25w-To-Evw"/>
+                                    <action selector="emailTextFieldEditingDidEnd:" destination="wZg-sP-qL4" eventType="editingDidEnd" id="EP8-gU-Erx"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш электронный адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Iv-5J-Wzy">
                                 <rect key="frame" x="43" y="216" width="219.5" height="21"/>
@@ -95,6 +103,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="classTextFieldEditingChanged:" destination="wZg-sP-qL4" eventType="editingChanged" id="UWs-J6-70p"/>
+                                    <action selector="classTextFieldEditingDidEnd:" destination="wZg-sP-qL4" eventType="editingDidEnd" id="Rva-fJ-dog"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш класс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-N1-qZt">
                                 <rect key="frame" x="43" y="297" width="92.5" height="21"/>
@@ -118,6 +130,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="passwordTextFieldEditingChanged:" destination="wZg-sP-qL4" eventType="editingChanged" id="eNr-cg-8QV"/>
+                                    <action selector="passwordTextFieldEditingDidEnd:" destination="wZg-sP-qL4" eventType="editingDidEnd" id="AAs-TQ-nNq"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrT-nG-h6O">
                                 <rect key="frame" x="42" y="379" width="67" height="21"/>
@@ -167,10 +183,52 @@
                                     <segue destination="KSn-Kp-lva" kind="show" id="wdX-Ou-iST"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-jn-54h">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-jn-54h">
                                 <rect key="frame" x="37" y="156" width="5" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="5bV-Yo-g8t"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tdc-Oc-ojI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUc-GE-uBm">
+                                <rect key="frame" x="37" y="237" width="5" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ITJ-61-QdR"/>
+                                    <constraint firstAttribute="width" constant="5" id="XkB-cv-p4G"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJC-4P-h8F">
+                                <rect key="frame" x="37" y="318.5" width="5" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RPF-pu-7a2"/>
+                                    <constraint firstAttribute="width" constant="5" id="l81-Ln-ae1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HH3-GC-p9P">
+                                <rect key="frame" x="37" y="400" width="5" height="50"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="7Lk-hS-28s"/>
+                                    <constraint firstAttribute="height" constant="50" id="k8j-Ta-A2R"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="2"/>
@@ -180,18 +238,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rUc-GE-uBm" firstAttribute="top" secondItem="3z5-tl-HJk" secondAttribute="bottom" constant="-50" id="05U-Qg-3Ap"/>
+                            <constraint firstItem="Ij3-Zy-vZR" firstAttribute="leading" secondItem="Y4e-jn-54h" secondAttribute="trailing" constant="-4.5" id="2TM-Oz-LQF"/>
+                            <constraint firstItem="avF-S0-Z0h" firstAttribute="leading" secondItem="HH3-GC-p9P" secondAttribute="trailing" constant="-4.5" id="410-IQ-RYY"/>
                             <constraint firstItem="FGn-Pz-aY4" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="4oT-0c-wwI"/>
                             <constraint firstItem="q7G-V8-weD" firstAttribute="top" secondItem="3z5-tl-HJk" secondAttribute="bottom" constant="31.5" id="5uO-ES-q4A"/>
+                            <constraint firstItem="HH3-GC-p9P" firstAttribute="top" secondItem="avF-S0-Z0h" secondAttribute="bottom" constant="-50" id="7KR-ka-UQa"/>
+                            <constraint firstItem="q7G-V8-weD" firstAttribute="leading" secondItem="NJC-4P-h8F" secondAttribute="trailing" constant="-4.5" id="Bdb-0m-bbb"/>
                             <constraint firstItem="3z5-tl-HJk" firstAttribute="leading" secondItem="9Iv-5J-Wzy" secondAttribute="trailing" constant="-225" id="GtS-gn-T3E"/>
                             <constraint firstItem="q7G-V8-weD" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="Im6-x0-oeX"/>
                             <constraint firstItem="hpz-Fp-jIW" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="KM4-bv-G81"/>
                             <constraint firstItem="Ij3-Zy-vZR" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="POW-4Y-o1d"/>
                             <constraint firstItem="IgF-KD-FPO" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="UKc-iU-oQT"/>
                             <constraint firstItem="avF-S0-Z0h" firstAttribute="leading" secondItem="vrT-nG-h6O" secondAttribute="trailing" constant="-71.5" id="VI6-oh-5Jh"/>
+                            <constraint firstItem="NJC-4P-h8F" firstAttribute="top" secondItem="q7G-V8-weD" secondAttribute="bottom" constant="-50" id="Xk6-Ue-cj6"/>
                             <constraint firstItem="q7G-V8-weD" firstAttribute="centerY" secondItem="Lwh-oe-qae" secondAttribute="centerY" id="Yb5-oX-tI5"/>
                             <constraint firstItem="avF-S0-Z0h" firstAttribute="centerX" secondItem="Lwh-oe-qae" secondAttribute="centerX" id="bbi-pv-ZhY"/>
                             <constraint firstItem="avF-S0-Z0h" firstAttribute="top" secondItem="q7G-V8-weD" secondAttribute="bottom" constant="31.5" id="byz-AS-sjR"/>
+                            <constraint firstItem="3z5-tl-HJk" firstAttribute="leading" secondItem="rUc-GE-uBm" secondAttribute="trailing" constant="-4.5" id="cCC-af-10G"/>
                             <constraint firstItem="Lwh-oe-qae" firstAttribute="bottom" secondItem="hpz-Fp-jIW" secondAttribute="bottom" constant="20" id="fCL-gV-hMP"/>
+                            <constraint firstItem="Y4e-jn-54h" firstAttribute="top" secondItem="Ij3-Zy-vZR" secondAttribute="bottom" constant="-50" id="gY7-0L-7PP"/>
                             <constraint firstItem="avF-S0-Z0h" firstAttribute="top" secondItem="vrT-nG-h6O" secondAttribute="bottom" id="gbP-lG-NXa"/>
                             <constraint firstItem="hpz-Fp-jIW" firstAttribute="top" secondItem="FGn-Pz-aY4" secondAttribute="bottom" id="hOH-Ff-LRq"/>
                             <constraint firstItem="3z5-tl-HJk" firstAttribute="top" secondItem="Ij3-Zy-vZR" secondAttribute="bottom" constant="31" id="iWZ-eH-aNx"/>
@@ -208,13 +274,16 @@
                     <connections>
                         <outlet property="classLabel" destination="fD4-N1-qZt" id="ME3-x5-Awf"/>
                         <outlet property="classTextField" destination="q7G-V8-weD" id="8KB-RN-VIq"/>
+                        <outlet property="classTextFieldIndicator" destination="NJC-4P-h8F" id="Ecp-g8-BTt"/>
                         <outlet property="emailLabel" destination="9Iv-5J-Wzy" id="665-KG-f7y"/>
                         <outlet property="emailTextField" destination="3z5-tl-HJk" id="aIE-WQ-FhD"/>
+                        <outlet property="emailTextFieldIndicator" destination="rUc-GE-uBm" id="VPg-IW-cKY"/>
                         <outlet property="nameLabel" destination="zJB-Fn-Fhr" id="gd4-gQ-AAa"/>
                         <outlet property="nameTextField" destination="Ij3-Zy-vZR" id="20e-wH-VoU"/>
                         <outlet property="nameTextFieldIndicator" destination="Y4e-jn-54h" id="6Sr-iD-5yb"/>
                         <outlet property="passwordLabel" destination="vrT-nG-h6O" id="T4D-7W-Dc2"/>
                         <outlet property="passwordTextField" destination="avF-S0-Z0h" id="iDh-sx-5vT"/>
+                        <outlet property="passwordTextFieldIndicator" destination="HH3-GC-p9P" id="TcH-21-rbe"/>
                         <outlet property="registerButton" destination="hpz-Fp-jIW" id="0Sv-pH-W8w"/>
                         <segue destination="Bjh-73-fRg" kind="show" identifier="signUpToHome" id="w57-Je-EDo"/>
                     </connections>
