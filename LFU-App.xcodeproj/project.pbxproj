@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A85BB27E4B8934BCB6AA08D /* Pods_LFU_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5354CA27937126BD51CA844B /* Pods_LFU_AppUITests.framework */; };
+		46D4369CD3542786237E8E0D /* Pods_LFU_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994AE857727DDF71BBC2670 /* Pods_LFU_AppTests.framework */; };
+		753A0B9A0E52309AF93F8EF4 /* Pods_LFU_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0337CCD2092233BF9361D46 /* Pods_LFU_App.framework */; };
+		946C45592164F34B00AEA9F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 946C45582164F34B00AEA9F4 /* GoogleService-Info.plist */; };
 		9478008B2119A8E100BABE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478008A2119A8E100BABE5D /* AppDelegate.swift */; };
 		947800902119A8E100BABE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9478008E2119A8E100BABE5D /* Main.storyboard */; };
 		947800922119A8E200BABE5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947800912119A8E200BABE5D /* Assets.xcassets */; };
@@ -39,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26DEE6726FD533686A6B37B3 /* Pods-LFU-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-App/Pods-LFU-App.debug.xcconfig"; sourceTree = "<group>"; };
+		3AFDBC7857F05E70C47ED08C /* Pods-LFU-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-App/Pods-LFU-App.release.xcconfig"; sourceTree = "<group>"; };
+		5354CA27937126BD51CA844B /* Pods_LFU_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5994AE857727DDF71BBC2670 /* Pods_LFU_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E7B90C4A106B3496BB6100 /* Pods-LFU-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-AppTests/Pods-LFU-AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		946C45582164F34B00AEA9F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		947800872119A8E100BABE5D /* LFU-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LFU-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9478008A2119A8E100BABE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9478008F2119A8E100BABE5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +67,10 @@
 		947800D02119AFDF00BABE5D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		949AC172215ADAF2005FD20D /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
 		94ABC859211B64F100EDA99A /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
+		C7FC901FF89E5E339CD189E8 /* Pods-LFU-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-AppUITests/Pods-LFU-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0337CCD2092233BF9361D46 /* Pods_LFU_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5FAD2427F3DF1009364FFD /* Pods-LFU-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-AppTests/Pods-LFU-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FAE2C154ED7951AC19001286 /* Pods-LFU-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-AppUITests/Pods-LFU-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753A0B9A0E52309AF93F8EF4 /* Pods_LFU_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D4369CD3542786237E8E0D /* Pods_LFU_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A85BB27E4B8934BCB6AA08D /* Pods_LFU_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1556A9753EC025DAFFB35D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26DEE6726FD533686A6B37B3 /* Pods-LFU-App.debug.xcconfig */,
+				3AFDBC7857F05E70C47ED08C /* Pods-LFU-App.release.xcconfig */,
+				ED5FAD2427F3DF1009364FFD /* Pods-LFU-AppTests.debug.xcconfig */,
+				75E7B90C4A106B3496BB6100 /* Pods-LFU-AppTests.release.xcconfig */,
+				C7FC901FF89E5E339CD189E8 /* Pods-LFU-AppUITests.debug.xcconfig */,
+				FAE2C154ED7951AC19001286 /* Pods-LFU-AppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6AE66AFDF670917A5063D84B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0337CCD2092233BF9361D46 /* Pods_LFU_App.framework */,
+				5994AE857727DDF71BBC2670 /* Pods_LFU_AppTests.framework */,
+				5354CA27937126BD51CA844B /* Pods_LFU_AppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9478007E2119A8E100BABE5D = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +131,8 @@
 				9478009E2119A8E300BABE5D /* LFU-AppTests */,
 				947800A92119A8E300BABE5D /* LFU-AppUITests */,
 				947800882119A8E100BABE5D /* Products */,
+				6A1556A9753EC025DAFFB35D /* Pods */,
+				6AE66AFDF670917A5063D84B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +156,7 @@
 				947800912119A8E200BABE5D /* Assets.xcassets */,
 				947800932119A8E200BABE5D /* LaunchScreen.storyboard */,
 				947800962119A8E200BABE5D /* Info.plist */,
+				946C45582164F34B00AEA9F4 /* GoogleService-Info.plist */,
 				947800BB2119AAA300BABE5D /* Fonts */,
 			);
 			path = "LFU-App";
@@ -171,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 947800AF2119A8E300BABE5D /* Build configuration list for PBXNativeTarget "LFU-App" */;
 			buildPhases = (
+				70CE150C5E5D6E06BE872381 /* [CP] Check Pods Manifest.lock */,
 				947800832119A8E100BABE5D /* Sources */,
 				947800842119A8E100BABE5D /* Frameworks */,
 				947800852119A8E100BABE5D /* Resources */,
@@ -188,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 947800B22119A8E300BABE5D /* Build configuration list for PBXNativeTarget "LFU-AppTests" */;
 			buildPhases = (
+				F4984234F6F07C99C3F93147 /* [CP] Check Pods Manifest.lock */,
 				947800972119A8E300BABE5D /* Sources */,
 				947800982119A8E300BABE5D /* Frameworks */,
 				947800992119A8E300BABE5D /* Resources */,
@@ -206,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 947800B52119A8E300BABE5D /* Build configuration list for PBXNativeTarget "LFU-AppUITests" */;
 			buildPhases = (
+				7655BA43CAA2899209711738 /* [CP] Check Pods Manifest.lock */,
 				947800A22119A8E300BABE5D /* Sources */,
 				947800A32119A8E300BABE5D /* Frameworks */,
 				947800A42119A8E300BABE5D /* Resources */,
@@ -232,13 +278,16 @@
 				TargetAttributes = {
 					947800862119A8E100BABE5D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					9478009A2119A8E300BABE5D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 947800862119A8E100BABE5D;
 					};
 					947800A52119A8E300BABE5D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 947800862119A8E100BABE5D;
 					};
 				};
@@ -273,6 +322,7 @@
 				947800922119A8E200BABE5D /* Assets.xcassets in Resources */,
 				947800CF2119AF1500BABE5D /* Montserrat-Regular.ttf in Resources */,
 				947800902119A8E100BABE5D /* Main.storyboard in Resources */,
+				946C45592164F34B00AEA9F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +341,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70CE150C5E5D6E06BE872381 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFU-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7655BA43CAA2899209711738 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFU-AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4984234F6F07C99C3F93147 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFU-AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		947800832119A8E100BABE5D /* Sources */ = {
@@ -472,6 +579,7 @@
 		};
 		947800B02119A8E300BABE5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26DEE6726FD533686A6B37B3 /* Pods-LFU-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -483,13 +591,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "exertum.LFU-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		947800B12119A8E300BABE5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AFDBC7857F05E70C47ED08C /* Pods-LFU-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,13 +610,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "exertum.LFU-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		947800B32119A8E300BABE5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED5FAD2427F3DF1009364FFD /* Pods-LFU-AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,7 +631,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "exertum.LFU-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFU-App.app/LFU-App";
 			};
@@ -529,6 +639,7 @@
 		};
 		947800B42119A8E300BABE5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E7B90C4A106B3496BB6100 /* Pods-LFU-AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,7 +653,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "exertum.LFU-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFU-App.app/LFU-App";
 			};
@@ -550,6 +661,7 @@
 		};
 		947800B62119A8E300BABE5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FC901FF89E5E339CD189E8 /* Pods-LFU-AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -562,7 +674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "exertum.LFU-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "LFU-App";
 			};
@@ -570,6 +682,7 @@
 		};
 		947800B72119A8E300BABE5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAE2C154ED7951AC19001286 /* Pods-LFU-AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -582,7 +695,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "exertum.LFU-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "LFU-App";
 			};

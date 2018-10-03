@@ -486,7 +486,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltB-JJ-8gY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2809" y="-51"/>
+            <point key="canvasLocation" x="2809" y="384"/>
+        </scene>
+        <!--Чат-->
+        <scene sceneID="a1S-vG-sN4">
+            <objects>
+                <viewController id="aJV-uG-Tgc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n7y-4M-27u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZhQ-6R-1un"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Чат" id="21x-BB-KUH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MA9-3V-WN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="-384"/>
         </scene>
         <!--Главная-->
         <scene sceneID="3eL-ea-kIl">
@@ -496,28 +512,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ГЛАВНАЯ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9m-NV-Ir6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ГЛАВНАЯ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9m-NV-Ir6">
                                 <rect key="frame" x="20" y="30" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.30588235289999999" green="0.42352941179999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СРЕДА" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-Az-e5z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СРЕДА" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-Az-e5z">
                                 <rect key="frame" x="20" y="59" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-K9-AeW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-K9-AeW">
                                 <rect key="frame" x="20" y="100" width="335" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Расписание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OV-w6-TsB">
-                                        <rect key="frame" x="111" y="5" width="115" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расписание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OV-w6-TsB">
+                                        <rect key="frame" x="110" y="5" width="115" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -552,9 +564,23 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="4UT-cj-A5o"/>
+                                    <constraint firstItem="1OV-w6-TsB" firstAttribute="top" secondItem="nbC-K9-AeW" secondAttribute="top" constant="5" id="9gX-Y2-y8B"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nbC-K9-AeW" firstAttribute="centerX" secondItem="PPy-y3-GSu" secondAttribute="centerX" id="7lt-bg-3Me"/>
+                            <constraint firstItem="Ge1-Az-e5z" firstAttribute="leading" secondItem="PPy-y3-GSu" secondAttribute="leading" constant="20" id="8J1-6S-4wm"/>
+                            <constraint firstItem="1OV-w6-TsB" firstAttribute="centerX" secondItem="PPy-y3-GSu" secondAttribute="centerX" id="9Xy-2J-xdL"/>
+                            <constraint firstItem="W9m-NV-Ir6" firstAttribute="leading" secondItem="PPy-y3-GSu" secondAttribute="leading" constant="20" id="CVc-gQ-pnr"/>
+                            <constraint firstItem="nbC-K9-AeW" firstAttribute="top" secondItem="Ge1-Az-e5z" secondAttribute="bottom" constant="20" id="Tzv-ur-glg"/>
+                            <constraint firstItem="Ge1-Az-e5z" firstAttribute="top" secondItem="W9m-NV-Ir6" secondAttribute="bottom" constant="-1" id="Ymh-YG-ntm"/>
+                            <constraint firstItem="nbC-K9-AeW" firstAttribute="leading" secondItem="Ge1-Az-e5z" secondAttribute="trailing" constant="-66" id="gjI-yR-uk6"/>
+                            <constraint firstItem="W9m-NV-Ir6" firstAttribute="top" secondItem="PPy-y3-GSu" secondAttribute="top" constant="10" id="ip1-nj-ywW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PPy-y3-GSu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="homeIcon" id="gUp-26-0YS"/>
@@ -564,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6i-Nj-V9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2808.8000000000002" y="-716.49175412293857"/>
+            <point key="canvasLocation" x="2809" y="-1110"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="d0R-gg-mxI">
@@ -578,6 +604,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="D4u-0U-jmg" kind="relationship" relationship="viewControllers" id="Z1J-Dt-ude"/>
+                        <segue destination="aJV-uG-Tgc" kind="relationship" relationship="viewControllers" id="oEE-eW-a2M"/>
                         <segue destination="lXt-C3-yvH" kind="relationship" relationship="viewControllers" id="YeM-c9-hmn"/>
                     </connections>
                 </tabBarController>
@@ -594,6 +621,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QmP-qY-etD"/>
+        <segue reference="w57-Je-EDo"/>
     </inferredMetricsTieBreakers>
 </document>
