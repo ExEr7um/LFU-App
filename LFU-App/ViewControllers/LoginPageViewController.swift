@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpPageViewController: UIViewController {
+class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -63,9 +63,31 @@ class SignUpPageViewController: UIViewController {
         }
     }
     
+    let classPickerData = [String](arrayLiteral: "", "10А", "10Б", "10В", "10Г", "11А — Социально-экономический", "11Б — Технологический", "11Б — Гуманитарный", "11Б — Естественно-научный")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         respring()
+        
+        let classPicker = UIPickerView()
+        classTextField.inputView = classPicker
+        classPicker.delegate = self
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return classPickerData.count
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return classPickerData[row]
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        classTextField.text = classPickerData[row]
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
