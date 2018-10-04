@@ -21,6 +21,7 @@
 		947800CE2119AF1100BABE5D /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 947800C52119AAF900BABE5D /* Montserrat-Black.ttf */; };
 		947800CF2119AF1500BABE5D /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 947800C42119AAF900BABE5D /* Montserrat-Regular.ttf */; };
 		947800D12119AFDF00BABE5D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947800D02119AFDF00BABE5D /* TextField.swift */; };
+		948D8E2A2166240900C8519B /* MainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D8E292166240900C8519B /* MainPageTabBarController.swift */; };
 		949AC173215ADAF2005FD20D /* SignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949AC172215ADAF2005FD20D /* SignInPageViewController.swift */; };
 		94ABC85A211B64F100EDA99A /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ABC859211B64F100EDA99A /* mainPageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		947800C42119AAF900BABE5D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		947800C52119AAF900BABE5D /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		947800D02119AFDF00BABE5D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		948D8E292166240900C8519B /* MainPageTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTabBarController.swift; sourceTree = "<group>"; };
 		949AC172215ADAF2005FD20D /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
 		94ABC859211B64F100EDA99A /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
 		C7FC901FF89E5E339CD189E8 /* Pods-LFU-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-AppUITests/Pods-LFU-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				947800B92119A97100BABE5D /* LoginPageViewController.swift */,
 				94ABC859211B64F100EDA99A /* mainPageViewController.swift */,
 				949AC172215ADAF2005FD20D /* SignInPageViewController.swift */,
+				948D8E292166240900C8519B /* MainPageTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				94ABC85A211B64F100EDA99A /* mainPageViewController.swift in Sources */,
 				947800D12119AFDF00BABE5D /* TextField.swift in Sources */,
 				9478008B2119A8E100BABE5D /* AppDelegate.swift in Sources */,
+				948D8E2A2166240900C8519B /* MainPageTabBarController.swift in Sources */,
 				947800BA2119A97100BABE5D /* LoginPageViewController.swift in Sources */,
 				949AC173215ADAF2005FD20D /* SignInPageViewController.swift in Sources */,
 			);

@@ -592,15 +592,16 @@
             </objects>
             <point key="canvasLocation" x="2809" y="-1110"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Page Tab Bar Controller-->
         <scene sceneID="d0R-gg-mxI">
             <objects>
-                <tabBarController id="Bjh-73-fRg" sceneMemberID="viewController">
+                <tabBarController id="Bjh-73-fRg" customClass="MainPageTabBarController" customModule="LFU_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VUs-g0-03S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="mainColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="D4u-0U-jmg" kind="relationship" relationship="viewControllers" id="Z1J-Dt-ude"/>
