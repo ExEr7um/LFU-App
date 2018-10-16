@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignInPageViewController: UIViewController {
 
@@ -28,11 +30,18 @@ class SignInPageViewController: UIViewController {
         checkPasswordTextField()
     }
     
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+    
     @IBAction func signInButtonPressed(_ sender: Any) {
         checkEmailTextField()
         checkPasswordTextField()
         if emailTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
-            performSegue(withIdentifier: "signInToHome", sender: signInButtonPressed)
+            showLoading()
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                self.performSegue(withIdentifier: "signInToHome", sender: self.signInButton)
+                self.hideLoading()
+            }
         }
     }
     
@@ -70,6 +79,16 @@ class SignInPageViewController: UIViewController {
             }
             animator.startAnimation()
         }
+    }
+    
+    func showLoading() {
+        loadingActivityIndicator.alpha = 1
+        signInButton.setTitle("", for: .normal)
+    }
+    
+    func hideLoading() {
+        loadingActivityIndicator.alpha = 0
+        signInButton.setTitle("Зарегистрироваться", for: .normal)
     }
     
 }

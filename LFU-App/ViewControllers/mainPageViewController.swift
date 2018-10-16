@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class mainPageViewController: UIViewController {
     
     @IBOutlet weak var scheduleView: UIView!
+    
+    var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,18 @@ class mainPageViewController: UIViewController {
         scheduleView.layer.shadowOffset = CGSize.init(width: 0, height: 10)
         scheduleView.layer.shadowRadius = 30
         scheduleView.layer.cornerRadius = 15
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        Auth.auth().removeStateDidChangeListener(handle!)
     }
     
 }

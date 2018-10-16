@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,6 +16,8 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var classLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var nameTextField: TextField!
     @IBOutlet weak var nameTextFieldIndicator: UIView!
@@ -59,7 +63,12 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
         checkClassTextField()
         checkPasswordTextField()
         if nameTextField.text!.isEmpty == false && emailTextField.text!.isEmpty == false && classTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
-            performSegue(withIdentifier: "signUpToHome", sender: registerButton)
+            showLoading()
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
+                print("User created!")
+                self.hideLoading()
+                self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton)
+            }
         }
     }
     
@@ -169,4 +178,15 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
             animator.startAnimation()
         }
     }
+    
+    func showLoading() {
+        loadingActivityIndicator.alpha = 1
+        registerButton.setTitle("", for: .normal)
+    }
+    
+    func hideLoading() {
+        loadingActivityIndicator.alpha = 0
+        registerButton.setTitle("Зарегистрироваться", for: .normal)
+    }
+    
 }
