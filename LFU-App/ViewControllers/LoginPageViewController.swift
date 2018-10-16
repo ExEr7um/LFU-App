@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -65,6 +66,13 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
         if nameTextField.text!.isEmpty == false && emailTextField.text!.isEmpty == false && classTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
             showLoading()
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
+                let db = Firestore.firestore()
+                db.collection("users").addDocument(data: [
+                    "name": self.nameTextField.text!,
+                    "class": self.classTextField.text!
+                ]) { err in
+                    print("Error!")
+                }
                 print("User created!")
                 self.hideLoading()
                 self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton)
