@@ -18,11 +18,15 @@ class mainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: Созданиие графики при загрузке
+        
         scheduleView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         scheduleView.layer.shadowOpacity = 0.1
         scheduleView.layer.shadowOffset = CGSize.init(width: 0, height: 10)
         scheduleView.layer.shadowRadius = 30
         scheduleView.layer.cornerRadius = 15
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

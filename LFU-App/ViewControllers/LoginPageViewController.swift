@@ -65,11 +65,13 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
         checkPasswordTextField()
         if nameTextField.text!.isEmpty == false && emailTextField.text!.isEmpty == false && classTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
             showLoading()
+            
+            //Загрузка данных в Firebase
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
                 let db = Firestore.firestore()
                 db.collection("users").addDocument(data: [
-                    "name": self.nameTextField.text!,
-                    "class": self.classTextField.text!
+                    "name": self.nameTextField.text!, //Добавление имени
+                    "class": self.classTextField.text! //Добавление класса
                 ]) { err in
                     print("Error!")
                 }
@@ -77,6 +79,7 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 self.hideLoading()
                 self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton)
             }
+            
         }
     }
     

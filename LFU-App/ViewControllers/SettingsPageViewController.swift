@@ -15,6 +15,9 @@ class SettingsPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: Созданиие графики при загрузке
+        
         profileInfoView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         profileInfoView.layer.shadowOpacity = 0.1
         profileInfoView.layer.shadowOffset = CGSize.init(width: 0, height: 10)
