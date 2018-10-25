@@ -24,6 +24,7 @@
 		948D8E2A2166240900C8519B /* MainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D8E292166240900C8519B /* MainPageTabBarController.swift */; };
 		948F672A21749E6B00B611FC /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F672921749E6B00B611FC /* SettingsPageViewController.swift */; };
 		949AC173215ADAF2005FD20D /* SignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949AC172215ADAF2005FD20D /* SignInPageViewController.swift */; };
+		949F37082181BE0500A81F8C /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949F37072181BE0500A81F8C /* LoadingScreenViewController.swift */; };
 		94ABC85A211B64F100EDA99A /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ABC859211B64F100EDA99A /* mainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		948D8E292166240900C8519B /* MainPageTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTabBarController.swift; sourceTree = "<group>"; };
 		948F672921749E6B00B611FC /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
 		949AC172215ADAF2005FD20D /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
+		949F37072181BE0500A81F8C /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		94ABC859211B64F100EDA99A /* mainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
 		C7FC901FF89E5E339CD189E8 /* Pods-LFU-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-AppUITests/Pods-LFU-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E0337CCD2092233BF9361D46 /* Pods_LFU_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 			children = (
 				947800B92119A97100BABE5D /* LoginPageViewController.swift */,
 				94ABC859211B64F100EDA99A /* mainPageViewController.swift */,
+				949F37072181BE0500A81F8C /* LoadingScreenViewController.swift */,
 				949AC172215ADAF2005FD20D /* SignInPageViewController.swift */,
 				948D8E292166240900C8519B /* MainPageTabBarController.swift */,
 				948F672921749E6B00B611FC /* SettingsPageViewController.swift */,
@@ -450,6 +453,7 @@
 				948F672A21749E6B00B611FC /* SettingsPageViewController.swift in Sources */,
 				94ABC85A211B64F100EDA99A /* mainPageViewController.swift in Sources */,
 				947800D12119AFDF00BABE5D /* TextField.swift in Sources */,
+				949F37082181BE0500A81F8C /* LoadingScreenViewController.swift in Sources */,
 				9478008B2119A8E100BABE5D /* AppDelegate.swift in Sources */,
 				948D8E2A2166240900C8519B /* MainPageTabBarController.swift in Sources */,
 				947800BA2119A97100BABE5D /* LoginPageViewController.swift in Sources */,

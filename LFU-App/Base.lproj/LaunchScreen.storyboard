@@ -25,19 +25,15 @@
                                     <constraint firstAttribute="height" constant="128" id="vqZ-nf-JWy"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-m3-xEZ">
-                                <rect key="frame" x="169.5" y="531" width="36" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="233-Rs-hBv"/>
-                                    <constraint firstAttribute="height" constant="36" id="Cz6-Gr-Tcm"/>
-                                </constraints>
-                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="78z-KC-5qZ">
+                                <rect key="frame" x="177.5" y="538" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NI3-m3-xEZ" secondAttribute="bottom" constant="100" id="26A-fb-h20"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="78z-KC-5qZ" secondAttribute="bottom" constant="109" id="2PO-nv-IU2"/>
+                            <constraint firstItem="78z-KC-5qZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Yb-Ie-W9y"/>
                             <constraint firstItem="fb6-Zf-yhC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aD1-y8-Igt"/>
-                            <constraint firstItem="NI3-m3-xEZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pfK-3X-sU1"/>
                             <constraint firstItem="fb6-Zf-yhC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-74.5" id="sme-rC-fS5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,6 +46,5 @@
     </scenes>
     <resources>
         <image name="AppIconGrey" width="1024" height="1024"/>
-        <image name="loadingIcon" width="568" height="568"/>
     </resources>
 </document>

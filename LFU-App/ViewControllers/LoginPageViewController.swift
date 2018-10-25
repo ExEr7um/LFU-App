@@ -67,17 +67,14 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
             showLoading()
             
             //Загрузка данных в Firebase
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
-                let db = Firestore.firestore()
-                db.collection("users").addDocument(data: [
-                    "name": self.nameTextField.text!, //Добавление имени
-                    "class": self.classTextField.text! //Добавление класса
-                ]) { err in
-                    print("Error!")
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { user, error in
+                if error == nil && user != nil {
+                    self.hideLoading()
+                    print("User created!")
+                    self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton)
+                } else {
+                    print("Error creating user: \(error!.localizedDescription)")
                 }
-                print("User created!")
-                self.hideLoading()
-                self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton)
             }
             
         }

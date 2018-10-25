@@ -38,9 +38,14 @@ class SignInPageViewController: UIViewController {
         checkPasswordTextField()
         if emailTextField.text!.isEmpty == false && passwordTextField.text!.isEmpty == false {
             showLoading()
-            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-                self.performSegue(withIdentifier: "signInToHome", sender: self.signInButton)
-                self.hideLoading()
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { user, error in
+                if error == nil && user != nil {
+                    self.hideLoading()
+                    print("Signed in!")
+                    self.performSegue(withIdentifier: "signInToHome", sender: self.signInButton)
+                } else {
+                    print("Error signing in: \(error!.localizedDescription)")
+                }
             }
         }
     }

@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SettingsPageViewController: UIViewController {
 
     @IBOutlet weak var profileInfoView: UIView!
     @IBOutlet weak var profileInfoMoreButton: UIButton!
+    @IBAction func signOutButton(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
