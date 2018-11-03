@@ -569,6 +569,8 @@
                     <connections>
                         <outlet property="profileInfoMoreButton" destination="Cs9-PI-VF3" id="jcW-1e-0Xm"/>
                         <outlet property="profileInfoView" destination="zFx-6a-HJQ" id="htN-eA-cIc"/>
+                        <outlet property="userClassLabel" destination="MjC-Eh-iT4" id="7gn-T3-qLG"/>
+                        <outlet property="userNameLabel" destination="hyc-ru-g3S" id="1Ib-Pu-O8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltB-JJ-8gY" userLabel="First Responder" sceneMemberID="firstResponder"/>

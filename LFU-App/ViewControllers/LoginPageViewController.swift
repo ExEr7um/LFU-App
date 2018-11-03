@@ -13,6 +13,8 @@ import FirebaseFirestore
 
 class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    //MARK: - Подключение компонентов
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var classLabel: UILabel!
@@ -70,8 +72,31 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { user, error in
                 if error == nil && user != nil {
                     self.hideLoading()
-                    print("User created!")
-                    self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton)
+                    print("Пользователь создан!") //Пользователь создан
+                    
+                    //Смена отображаемого имени пользователя
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = self.nameTextField.text!
+                    changeRequest?.commitChanges { error in
+                        if error == nil {
+                            print("Имя пользователя изменено!")
+                        }
+                    }
+                    
+                    //Смена класса пользователя
+                    let db = Firestore.firestore()
+                    db.collection("users").document((Auth.auth().currentUser?.uid)!).setData([
+                        "userClass": self.classTextField.text!,
+                        ]) { err in
+                            if let err = err {
+                                print("Ошибка задания класса: \(err)")
+                            } else {
+                                print("Класс пользователя изменен!")
+                            }
+                    }
+                    
+                    self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton) //Переход на главную страницу
+                    
                 } else {
                     print("Error creating user: \(error!.localizedDescription)")
                 }
@@ -79,6 +104,8 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
             
         }
     }
+    
+    //MARK: - Функции
     
     let classPickerData = [String](arrayLiteral: "", "10А", "10Б", "10В", "10Г", "11А — Социально-экономический", "11Б — Технологический", "11Б — Гуманитарный", "11Б — Естественно-научный")
     
@@ -134,6 +161,8 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
         animator.startAnimation()
     }
     
+    //MARK: - Проверка текстовых полей
+    
     func checkNameTextField() {
         if nameTextField.text!.isEmpty {
             let animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1) {
@@ -186,6 +215,8 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
             animator.startAnimation()
         }
     }
+    
+    //MARK: - Аниимации загрузки
     
     func showLoading() {
         loadingActivityIndicator.alpha = 1
