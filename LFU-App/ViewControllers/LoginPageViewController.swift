@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import Firebase
 import FirebaseAuth
-import FirebaseFirestore
 
 class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -79,20 +77,8 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     changeRequest?.displayName = self.nameTextField.text!
                     changeRequest?.commitChanges { error in
                         if error == nil {
-                            print("Имя пользователя изменено!")
+                            print("Данные пользователя изменены!")
                         }
-                    }
-                    
-                    //Смена класса пользователя
-                    let db = Firestore.firestore()
-                    db.collection("users").document((Auth.auth().currentUser?.uid)!).setData([
-                        "userClass": self.classTextField.text!,
-                        ]) { err in
-                            if let err = err {
-                                print("Ошибка задания класса: \(err)")
-                            } else {
-                                print("Класс пользователя изменен!")
-                            }
                     }
                     
                     self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton) //Переход на главную страницу

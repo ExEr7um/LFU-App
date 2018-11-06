@@ -9,7 +9,7 @@ target 'LFU-App' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
 
   target 'LFU-AppTests' do
     inherit! :search_paths

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lwq-Zn-x4Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lwq-Zn-x4Y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -636,9 +636,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Русский язык" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5m-Eh-WxO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русский язык" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5m-Eh-WxO">
                                         <rect key="frame" x="20" y="49" width="121" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="996-VT-fxn"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -668,6 +670,8 @@
                                 <color key="tintColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="094-OH-5hr"/>
+                                    <constraint firstItem="K5m-Eh-WxO" firstAttribute="top" secondItem="1OV-w6-TsB" secondAttribute="bottom" constant="13" id="2Wa-d0-3c8"/>
+                                    <constraint firstItem="K5m-Eh-WxO" firstAttribute="leading" secondItem="nbC-K9-AeW" secondAttribute="leading" constant="20" id="41L-yY-VAT"/>
                                     <constraint firstItem="1OV-w6-TsB" firstAttribute="centerX" secondItem="nbC-K9-AeW" secondAttribute="centerX" id="SwC-WK-fAP"/>
                                     <constraint firstItem="1OV-w6-TsB" firstAttribute="top" secondItem="nbC-K9-AeW" secondAttribute="top" constant="15" id="pt4-bX-epX"/>
                                 </constraints>
@@ -681,14 +685,16 @@
                             <constraint firstItem="W9m-NV-Ir6" firstAttribute="leading" secondItem="PPy-y3-GSu" secondAttribute="leading" constant="20" id="CVc-gQ-pnr"/>
                             <constraint firstItem="nbC-K9-AeW" firstAttribute="top" secondItem="Ge1-Az-e5z" secondAttribute="bottom" constant="20" id="Tzv-ur-glg"/>
                             <constraint firstItem="Ge1-Az-e5z" firstAttribute="top" secondItem="W9m-NV-Ir6" secondAttribute="bottom" constant="-1" id="Ymh-YG-ntm"/>
-                            <constraint firstItem="nbC-K9-AeW" firstAttribute="leading" secondItem="Ge1-Az-e5z" secondAttribute="trailing" constant="-66" id="gjI-yR-uk6"/>
+                            <constraint firstItem="nbC-K9-AeW" firstAttribute="leading" secondItem="PPy-y3-GSu" secondAttribute="leading" constant="20" id="iAA-8L-crC"/>
                             <constraint firstItem="W9m-NV-Ir6" firstAttribute="top" secondItem="PPy-y3-GSu" secondAttribute="top" constant="10" id="ip1-nj-ywW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PPy-y3-GSu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="homeIcon" id="gUp-26-0YS"/>
                     <connections>
+                        <outlet property="currentLessonLabel" destination="K5m-Eh-WxO" id="pMH-eh-vXJ"/>
                         <outlet property="scheduleView" destination="nbC-K9-AeW" id="SUH-FE-ZTd"/>
+                        <outlet property="todayDateLabel" destination="Ge1-Az-e5z" id="b8w-QD-Rxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6i-Nj-V9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
