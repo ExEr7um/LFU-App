@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -80,6 +81,11 @@ class SignUpPageViewController: UIViewController, UIPickerViewDelegate, UIPicker
                             print("Данные пользователя изменены!")
                         }
                     }
+                    
+                    //Загрузка информации в базу данных
+                    var ref: DatabaseReference!
+                    ref = Database.database().reference()
+                    ref.child("users").child((user?.uid)!).setValue(["class": self.classTextField.text!])
                     
                     self.performSegue(withIdentifier: "signUpToHome", sender: self.registerButton) //Переход на главную страницу
                     

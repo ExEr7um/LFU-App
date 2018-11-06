@@ -92,7 +92,7 @@ class mainPageViewController: UIViewController {
         case 940..<985:
             currentLesson = 6
         default:
-            currentLesson = -1
+            currentLesson = 7
         }
         
         //Получение расписания
