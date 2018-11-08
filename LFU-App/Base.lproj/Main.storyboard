@@ -645,9 +645,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:30 — 10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-z9-EvE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 — 10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-z9-EvE">
                                         <rect key="frame" x="20" y="70" width="86" height="19"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="fDf-S7-1dr"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -672,6 +674,8 @@
                                     <constraint firstAttribute="height" constant="114" id="094-OH-5hr"/>
                                     <constraint firstItem="K5m-Eh-WxO" firstAttribute="top" secondItem="1OV-w6-TsB" secondAttribute="bottom" constant="13" id="2Wa-d0-3c8"/>
                                     <constraint firstItem="K5m-Eh-WxO" firstAttribute="leading" secondItem="nbC-K9-AeW" secondAttribute="leading" constant="20" id="41L-yY-VAT"/>
+                                    <constraint firstItem="LxY-z9-EvE" firstAttribute="leading" secondItem="nbC-K9-AeW" secondAttribute="leading" constant="20" id="ACa-Am-N0a"/>
+                                    <constraint firstItem="LxY-z9-EvE" firstAttribute="top" secondItem="K5m-Eh-WxO" secondAttribute="bottom" id="DTN-VZ-GCV"/>
                                     <constraint firstItem="1OV-w6-TsB" firstAttribute="centerX" secondItem="nbC-K9-AeW" secondAttribute="centerX" id="SwC-WK-fAP"/>
                                     <constraint firstItem="1OV-w6-TsB" firstAttribute="top" secondItem="nbC-K9-AeW" secondAttribute="top" constant="15" id="pt4-bX-epX"/>
                                 </constraints>
@@ -693,6 +697,7 @@
                     <tabBarItem key="tabBarItem" title="Главная" image="homeIcon" id="gUp-26-0YS"/>
                     <connections>
                         <outlet property="currentLessonLabel" destination="K5m-Eh-WxO" id="pMH-eh-vXJ"/>
+                        <outlet property="currentTimeLabel" destination="LxY-z9-EvE" id="wjd-I3-kUY"/>
                         <outlet property="scheduleView" destination="nbC-K9-AeW" id="SUH-FE-ZTd"/>
                         <outlet property="todayDateLabel" destination="Ge1-Az-e5z" id="b8w-QD-Rxu"/>
                     </connections>

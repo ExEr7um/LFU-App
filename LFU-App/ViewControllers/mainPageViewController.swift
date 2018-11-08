@@ -15,6 +15,7 @@ class mainPageViewController: UIViewController {
     @IBOutlet weak var scheduleView: UIView!
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var currentLessonLabel: UILabel!
+    @IBOutlet weak var currentTimeLabel: UILabel!
     
     var handle: AuthStateDidChangeListenerHandle?
     
@@ -87,20 +88,28 @@ class mainPageViewController: UIViewController {
         switch amountOfTime {
         case 570..<615:
             currentLesson = 0
+            currentTimeLabel.text = "9:30 — 10:15"
         case 635..<680:
             currentLesson = 1
+            currentTimeLabel.text = "10:35 — 11:20"
         case 690..<735:
             currentLesson = 2
+            currentTimeLabel.text = "11:30 — 12:15"
         case 745..<790:
             currentLesson = 3
+            currentTimeLabel.text = "12:25 — 13:10"
         case 800..<845:
             currentLesson = 4
+            currentTimeLabel.text = "13:20 — 14:05"
         case 885..<930:
             currentLesson = 5
+            currentTimeLabel.text = "14:45 — 15:30"
         case 940..<985:
             currentLesson = 6
+            currentTimeLabel.text = "15:40 — 16:25"
         default:
             currentLesson = 7
+            currentTimeLabel.text = ""
         }
         
         //Получение расписания
