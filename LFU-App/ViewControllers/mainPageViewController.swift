@@ -16,6 +16,7 @@ class mainPageViewController: UIViewController {
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var currentLessonLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var currentRoomLabel: UILabel!
     
     var handle: AuthStateDidChangeListenerHandle?
     
@@ -120,9 +121,13 @@ class mainPageViewController: UIViewController {
                     print(userClass)
                 }
             } else {
-                ref.child("Расписание").child(weekDay!).child("11Б — Технологический").observe(.value, with: { snapshot in
+                ref.child("Расписание").child(weekDay!).child(userClass as String).observe(.value, with: { snapshot in
                     let schedule = snapshot.value as! NSArray
                     self.currentLessonLabel.text! = schedule[currentLesson] as! String
+                })
+                ref.child("Кабинеты").child(weekDay!).child(userClass as String).observe(.value, with: { snapshot in
+                    let rooms = snapshot.value as! NSArray
+                    self.currentRoomLabel.text! = rooms[currentLesson] as! String
                 })
             }
         }

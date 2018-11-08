@@ -697,6 +697,7 @@
                     <tabBarItem key="tabBarItem" title="Главная" image="homeIcon" id="gUp-26-0YS"/>
                     <connections>
                         <outlet property="currentLessonLabel" destination="K5m-Eh-WxO" id="pMH-eh-vXJ"/>
+                        <outlet property="currentRoomLabel" destination="Z2g-lx-Agn" id="upN-HO-vwS"/>
                         <outlet property="currentTimeLabel" destination="LxY-z9-EvE" id="wjd-I3-kUY"/>
                         <outlet property="scheduleView" destination="nbC-K9-AeW" id="SUH-FE-ZTd"/>
                         <outlet property="todayDateLabel" destination="Ge1-Az-e5z" id="b8w-QD-Rxu"/>
