@@ -29,6 +29,7 @@ class mainPageViewController: UIViewController {
         scheduleView.layer.shadowRadius = 30
         scheduleView.layer.cornerRadius = 15
         
+        //Обновление дня недели и расписания
         updateTodayDate()
         updateSchedule()
         
@@ -71,6 +72,13 @@ class mainPageViewController: UIViewController {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         
+        //Получение класса пользователя
+        var userClass:NSString = ""
+        ref.child("users").child((Auth.auth().currentUser?.uid)!).child("class").observe(.value, with: { snapshot in
+            let userClassInfo = snapshot.value as! NSString
+            userClass = userClassInfo
+        })
+        
         //Определиние дня недели
         let weekDay = todayDateLabel.text
         
@@ -96,10 +104,19 @@ class mainPageViewController: UIViewController {
         }
         
         //Получение расписания
-        ref.child("Расписание").child(weekDay!).child("11Б — Технологический").observe(.value, with: { snapshot in
-            let schedule = snapshot.value as! NSArray
-            self.currentLessonLabel.text! = schedule[currentLesson] as! String
-        })
-        
+        func checkLoadingState() {
+            if userClass == "" {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    checkLoadingState()
+                    print(userClass)
+                }
+            } else {
+                ref.child("Расписание").child(weekDay!).child("11Б — Технологический").observe(.value, with: { snapshot in
+                    let schedule = snapshot.value as! NSArray
+                    self.currentLessonLabel.text! = schedule[currentLesson] as! String
+                })
+            }
+        }
+        checkLoadingState()
     }
 }
