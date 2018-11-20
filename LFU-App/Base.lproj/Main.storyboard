@@ -636,8 +636,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русский язык" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5m-Eh-WxO">
-                                        <rect key="frame" x="20" y="49" width="121" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5m-Eh-WxO">
+                                        <rect key="frame" x="20" y="49" width="4.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="996-VT-fxn"/>
                                         </constraints>
@@ -645,8 +645,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 — 10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-z9-EvE">
-                                        <rect key="frame" x="20" y="70" width="86" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-z9-EvE">
+                                        <rect key="frame" x="20" y="70" width="0.0" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="fDf-S7-1dr"/>
                                         </constraints>
@@ -666,6 +666,16 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="mainColor"/>
                                         <color key="tintColor" name="mainColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xid-iR-CnU">
+                                        <rect key="frame" x="20" y="55" width="205" height="9"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-zb-vwU">
+                                        <rect key="frame" x="20" y="75" width="167" height="9"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -697,15 +707,18 @@
                     <tabBarItem key="tabBarItem" title="Главная" image="homeIcon" id="gUp-26-0YS"/>
                     <connections>
                         <outlet property="currentLessonLabel" destination="K5m-Eh-WxO" id="pMH-eh-vXJ"/>
+                        <outlet property="currentLessonLoadingPlaceholder" destination="xid-iR-CnU" id="RYC-mT-79e"/>
                         <outlet property="currentRoomLabel" destination="Z2g-lx-Agn" id="upN-HO-vwS"/>
                         <outlet property="currentTimeLabel" destination="LxY-z9-EvE" id="wjd-I3-kUY"/>
+                        <outlet property="currentTimeLoadingPlaceholder" destination="i0N-zb-vwU" id="7PV-pO-sN5"/>
+                        <outlet property="scheduleSeparator" destination="kVz-iP-N5w" id="Phi-MK-ewp"/>
                         <outlet property="scheduleView" destination="nbC-K9-AeW" id="SUH-FE-ZTd"/>
                         <outlet property="todayDateLabel" destination="Ge1-Az-e5z" id="b8w-QD-Rxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6i-Nj-V9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2809" y="-1110"/>
+            <point key="canvasLocation" x="2808.8000000000002" y="-1110.4947526236883"/>
         </scene>
         <!--Main Page Tab Bar Controller-->
         <scene sceneID="d0R-gg-mxI">
