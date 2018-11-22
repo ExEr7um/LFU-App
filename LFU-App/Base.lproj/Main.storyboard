@@ -506,9 +506,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Фамилия Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyc-ru-g3S">
-                                        <rect key="frame" x="121" y="38" width="126" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyc-ru-g3S">
+                                        <rect key="frame" x="121" y="38" width="159" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="159" id="2bH-Sn-NWQ"/>
+                                            <constraint firstAttribute="height" constant="21" id="Ffh-yG-iRF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -530,9 +533,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Технологический" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjC-Eh-iT4">
-                                        <rect key="frame" x="121" y="59" width="138" height="19"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjC-Eh-iT4">
+                                        <rect key="frame" x="121" y="59" width="159" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="V11-o2-scT"/>
+                                            <constraint firstAttribute="width" constant="159" id="ZjJ-U0-xLb"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -545,11 +551,25 @@
                                             <action selector="signOutButton:" destination="lXt-C3-yvH" eventType="touchUpInside" id="S6i-Tz-Me4"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tpt-JJ-x8E">
+                                        <rect key="frame" x="121" y="65" width="125" height="9"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSk-T9-9DC">
+                                        <rect key="frame" x="121" y="45" width="159" height="9"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="mainColor"/>
                                 <constraints>
+                                    <constraint firstItem="hyc-ru-g3S" firstAttribute="leading" secondItem="Vhh-1o-j2u" secondAttribute="trailing" constant="26" id="49Z-rJ-2yn"/>
+                                    <constraint firstItem="MjC-Eh-iT4" firstAttribute="leading" secondItem="Vhh-1o-j2u" secondAttribute="trailing" constant="26" id="Fiw-xF-XHi"/>
+                                    <constraint firstItem="hyc-ru-g3S" firstAttribute="top" secondItem="zFx-6a-HJQ" secondAttribute="top" constant="38" id="G5n-7B-ten"/>
                                     <constraint firstAttribute="height" constant="195" id="JTf-kC-2Wf"/>
+                                    <constraint firstItem="MjC-Eh-iT4" firstAttribute="top" secondItem="hyc-ru-g3S" secondAttribute="bottom" id="N4B-PC-w8O"/>
                                     <constraint firstAttribute="width" constant="335" id="RDm-Mx-LO8"/>
                                     <constraint firstItem="Vhh-1o-j2u" firstAttribute="top" secondItem="zFx-6a-HJQ" secondAttribute="top" constant="20" id="XgU-Wt-HmW"/>
                                     <constraint firstItem="Vhh-1o-j2u" firstAttribute="leading" secondItem="zFx-6a-HJQ" secondAttribute="leading" constant="20" id="tTd-wg-ran"/>
@@ -570,12 +590,14 @@
                         <outlet property="profileInfoMoreButton" destination="Cs9-PI-VF3" id="jcW-1e-0Xm"/>
                         <outlet property="profileInfoView" destination="zFx-6a-HJQ" id="htN-eA-cIc"/>
                         <outlet property="userClassLabel" destination="MjC-Eh-iT4" id="7gn-T3-qLG"/>
+                        <outlet property="userClassLabelLoadingPlaceholder" destination="Tpt-JJ-x8E" id="jE7-H9-Ava"/>
                         <outlet property="userNameLabel" destination="hyc-ru-g3S" id="1Ib-Pu-O8e"/>
+                        <outlet property="userNameLabelLoadingPlaceholder" destination="BSk-T9-9DC" id="oaC-tu-0s9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltB-JJ-8gY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2809" y="384"/>
+            <point key="canvasLocation" x="2808.8000000000002" y="383.65817091454278"/>
         </scene>
         <!--Чат-->
         <scene sceneID="a1S-vG-sN4">
