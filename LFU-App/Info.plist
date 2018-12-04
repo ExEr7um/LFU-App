@@ -39,6 +39,8 @@
 		<string>Montserrat-Black.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Нам нужен доступ к вашей галерее, чтобы вы могли изменить ваш аватар</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

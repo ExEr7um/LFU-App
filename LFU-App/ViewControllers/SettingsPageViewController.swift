@@ -8,7 +8,9 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseStorage
 import FirebaseDatabase
+import Photos
 
 class SettingsPageViewController: UIViewController {
 
@@ -20,6 +22,10 @@ class SettingsPageViewController: UIViewController {
     
     @IBOutlet weak var userNameLabelLoadingPlaceholder: UIView!
     @IBOutlet weak var userClassLabelLoadingPlaceholder: UIView!
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
+    var selectedImage: UIImage?
     
     @IBAction func signOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
@@ -49,6 +55,17 @@ class SettingsPageViewController: UIViewController {
         userNameLabelLoadingPlaceholder.alpha = 0
         userClassLabelLoadingPlaceholder.alpha = 0
         
+        userImage.layer.cornerRadius = 34.5
+        userImage.layer.masksToBounds = true
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SettingsPageViewController.handleSelectUserImageView))
+        userImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func handleSelectUserImageView() {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController, animated: true, completion: nil)
     }
     
     func updateUserClass() {
@@ -113,6 +130,65 @@ class SettingsPageViewController: UIViewController {
             }
         }
         checkScheduleAvailability()
+        
     }
     
+    func uploadUserImage() {
+        let storageRef = Storage.storage().reference().child("userImages").child((Auth.auth().currentUser?.uid)!)
+        if let imageData = selectedImage?.jpegData(compressionQuality: 0.1) {
+            storageRef.putData(imageData, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print(error?.localizedDescription)
+                    return
+                }
+                let profileImageURL = metadata?.downloadURL()?.absoluteURL
+                
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.photoURL = profileImageURL
+                changeRequest?.commitChanges { error in
+                    if error == nil {
+                        print("Данные пользователя изменены!")
+                    }
+                }
+            })
+        }
+    }
+    
+    func checkPermission() {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+        case .authorized:
+            print("Access is granted by user")
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({
+                (newStatus) in
+                print("status is \(newStatus)")
+                if newStatus ==  PHAuthorizationStatus.authorized {
+                    self.uploadUserImage()
+                    print("success")
+                }
+            })
+            print("It is not determined until now")
+        case .restricted:
+            // same same
+            print("User do not have access to photo album.")
+        case .denied:
+            // same same
+            print("User has denied the permission.")
+        }
+    }
+    
+}
+
+extension SettingsPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("Изображение выбрано!")
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        userImage.image = selectedImage
+        dismiss(animated: true, completion: nil)
+        
+        checkPermission()
+    }
 }
