@@ -27,6 +27,7 @@ class SettingsPageViewController: UIViewController {
     
     var selectedImage: UIImage?
     
+    @IBOutlet weak var signOutButton: UIButton!
     @IBAction func signOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)
@@ -44,7 +45,10 @@ class SettingsPageViewController: UIViewController {
         profileInfoView.layer.cornerRadius = 15
         
         profileInfoMoreButton.layer.borderWidth = 1
-        profileInfoMoreButton.layer.borderColor = #colorLiteral(red: 0.2707273364, green: 0.4276865125, blue: 0.9294869304, alpha: 1)
+        profileInfoMoreButton.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        
+        signOutButton.layer.borderWidth = 1
+        signOutButton.layer.borderColor = #colorLiteral(red: 0.9254901961, green: 0.3019607843, blue: 0.2392156863, alpha: 1)
         
         userNameLabel.text = Auth.auth().currentUser?.displayName
         
@@ -57,15 +61,6 @@ class SettingsPageViewController: UIViewController {
         
         userImage.layer.cornerRadius = 34.5
         userImage.layer.masksToBounds = true
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SettingsPageViewController.handleSelectUserImageView))
-        userImage.addGestureRecognizer(tapGestureRecognizer)
-    }
-    
-    @objc func handleSelectUserImageView() {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        present(pickerController, animated: true, completion: nil)
     }
     
     func updateUserClass() {
@@ -133,62 +128,4 @@ class SettingsPageViewController: UIViewController {
         
     }
     
-    func uploadUserImage() {
-        let storageRef = Storage.storage().reference().child("userImages").child((Auth.auth().currentUser?.uid)!)
-        if let imageData = selectedImage?.jpegData(compressionQuality: 0.1) {
-            storageRef.putData(imageData, metadata: nil, completion: { (metadata, error) in
-                if error != nil {
-                    print(error?.localizedDescription)
-                    return
-                }
-                let profileImageURL = metadata?.downloadURL()?.absoluteURL
-                
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.photoURL = profileImageURL
-                changeRequest?.commitChanges { error in
-                    if error == nil {
-                        print("Данные пользователя изменены!")
-                    }
-                }
-            })
-        }
-    }
-    
-    func checkPermission() {
-        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
-        switch photoAuthorizationStatus {
-        case .authorized:
-            print("Access is granted by user")
-        case .notDetermined:
-            PHPhotoLibrary.requestAuthorization({
-                (newStatus) in
-                print("status is \(newStatus)")
-                if newStatus ==  PHAuthorizationStatus.authorized {
-                    self.uploadUserImage()
-                    print("success")
-                }
-            })
-            print("It is not determined until now")
-        case .restricted:
-            // same same
-            print("User do not have access to photo album.")
-        case .denied:
-            // same same
-            print("User has denied the permission.")
-        }
-    }
-    
-}
-
-extension SettingsPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("Изображение выбрано!")
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        userImage.image = selectedImage
-        dismiss(animated: true, completion: nil)
-        
-        checkPermission()
-    }
 }

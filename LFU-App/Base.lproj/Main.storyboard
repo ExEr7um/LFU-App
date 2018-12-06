@@ -491,7 +491,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFx-6a-HJQ">
-                                <rect key="frame" x="20" y="99.5" width="335" height="195"/>
+                                <rect key="frame" x="20" y="99.5" width="335" height="180"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-rG-dC5">
                                         <rect key="frame" x="20" y="20" width="75" height="75"/>
@@ -501,22 +501,24 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyc-ru-g3S">
-                                        <rect key="frame" x="121" y="38" width="159" height="21"/>
+                                        <rect key="frame" x="121" y="38" width="194" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="159" id="2bH-Sn-NWQ"/>
+                                            <constraint firstAttribute="width" constant="194" id="2bH-Sn-NWQ"/>
                                             <constraint firstAttribute="height" constant="21" id="Ffh-yG-iRF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-PI-VF3">
-                                        <rect key="frame" x="20" y="125" width="295" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                        <color key="tintColor" name="mainColor"/>
-                                        <state key="normal" title="Подробнее">
-                                            <color key="titleColor" name="mainColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-PI-VF3">
+                                        <rect key="frame" x="20" y="110" width="140" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="IrP-5d-5Al"/>
+                                            <constraint firstAttribute="height" constant="50" id="ZXt-q6-ed6"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="editIcon">
+                                            <color key="titleColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -528,44 +530,56 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjC-Eh-iT4">
-                                        <rect key="frame" x="121" y="59" width="159" height="19"/>
+                                        <rect key="frame" x="121" y="59" width="194" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="V11-o2-scT"/>
-                                            <constraint firstAttribute="width" constant="159" id="ZjJ-U0-xLb"/>
+                                            <constraint firstAttribute="width" constant="194" id="ZjJ-U0-xLb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7E-qE-bK7">
-                                        <rect key="frame" x="293" y="46" width="22" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="signOutIcon"/>
-                                        <connections>
-                                            <action selector="signOutButton:" destination="lXt-C3-yvH" eventType="touchUpInside" id="S6i-Tz-Me4"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tpt-JJ-x8E">
-                                        <rect key="frame" x="121" y="65" width="125" height="9"/>
+                                        <rect key="frame" x="121" y="65" width="150" height="9"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSk-T9-9DC">
-                                        <rect key="frame" x="121" y="45" width="159" height="9"/>
+                                        <rect key="frame" x="121" y="45" width="186" height="9"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7E-qE-bK7">
+                                        <rect key="frame" x="175" y="110" width="140" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="0z9-sf-1St"/>
+                                            <constraint firstAttribute="height" constant="50" id="w5v-d0-59E"/>
+                                        </constraints>
+                                        <state key="normal" image="signOutIcon"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signOutButton:" destination="lXt-C3-yvH" eventType="touchUpInside" id="S6i-Tz-Me4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstItem="hyc-ru-g3S" firstAttribute="top" secondItem="zFx-6a-HJQ" secondAttribute="top" constant="38" id="G5n-7B-ten"/>
-                                    <constraint firstAttribute="height" constant="195" id="JTf-kC-2Wf"/>
+                                    <constraint firstItem="Cs9-PI-VF3" firstAttribute="leading" secondItem="zFx-6a-HJQ" secondAttribute="leading" constant="20" id="HFw-8N-9aj"/>
+                                    <constraint firstAttribute="height" constant="180" id="JTf-kC-2Wf"/>
                                     <constraint firstItem="vtt-rG-dC5" firstAttribute="leading" secondItem="zFx-6a-HJQ" secondAttribute="leading" constant="20" id="MFH-FJ-EP7"/>
                                     <constraint firstItem="MjC-Eh-iT4" firstAttribute="top" secondItem="hyc-ru-g3S" secondAttribute="bottom" id="N4B-PC-w8O"/>
                                     <constraint firstAttribute="width" constant="335" id="RDm-Mx-LO8"/>
+                                    <constraint firstItem="p7E-qE-bK7" firstAttribute="top" secondItem="Cs9-PI-VF3" secondAttribute="bottom" constant="-50" id="SdO-wb-rQH"/>
+                                    <constraint firstItem="Cs9-PI-VF3" firstAttribute="top" secondItem="vtt-rG-dC5" secondAttribute="bottom" constant="15" id="Wz3-bf-Ohg"/>
                                     <constraint firstItem="hyc-ru-g3S" firstAttribute="leading" secondItem="vtt-rG-dC5" secondAttribute="trailing" constant="26" id="aPk-Ws-Joa"/>
                                     <constraint firstItem="vtt-rG-dC5" firstAttribute="top" secondItem="zFx-6a-HJQ" secondAttribute="top" constant="20" id="fcH-l0-eXb"/>
+                                    <constraint firstItem="p7E-qE-bK7" firstAttribute="leading" secondItem="Cs9-PI-VF3" secondAttribute="trailing" constant="15" id="tg8-88-EjP"/>
                                     <constraint firstItem="MjC-Eh-iT4" firstAttribute="leading" secondItem="vtt-rG-dC5" secondAttribute="trailing" constant="26" id="waL-zV-eet"/>
                                 </constraints>
                             </view>
@@ -583,6 +597,7 @@
                     <connections>
                         <outlet property="profileInfoMoreButton" destination="Cs9-PI-VF3" id="jcW-1e-0Xm"/>
                         <outlet property="profileInfoView" destination="zFx-6a-HJQ" id="htN-eA-cIc"/>
+                        <outlet property="signOutButton" destination="p7E-qE-bK7" id="Epf-rH-w4d"/>
                         <outlet property="userClassLabel" destination="MjC-Eh-iT4" id="7gn-T3-qLG"/>
                         <outlet property="userClassLabelLoadingPlaceholder" destination="Tpt-JJ-x8E" id="jE7-H9-Ava"/>
                         <outlet property="userImage" destination="vtt-rG-dC5" id="AjE-RS-fCW"/>
@@ -798,10 +813,11 @@
     </scenes>
     <resources>
         <image name="AppIconGrey" width="1024" height="1024"/>
+        <image name="editIcon" width="27" height="18"/>
         <image name="homeIcon" width="26" height="25"/>
         <image name="messagesIcon" width="25" height="25"/>
         <image name="settingsIcon" width="25" height="25"/>
-        <image name="signOutIcon" width="22" height="25"/>
+        <image name="signOutIcon" width="20" height="18"/>
         <image name="userImage" width="75" height="75"/>
         <namedColor name="mainColor">
             <color red="0.30588235294117649" green="0.42352941176470588" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
